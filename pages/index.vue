@@ -13,7 +13,7 @@ export default {
   },
   head() {
     return {
-      title: "Kojo's - personal page, portolio, glorified CV",
+      title: "Kojo's - personal page, portfolio, glorified CV",
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
         {
