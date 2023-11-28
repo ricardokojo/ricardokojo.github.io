@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Logo from '../components/Logo.svelte';
+---
+
+<Layout title="Ricardo H. H. Kojo | Yet another software developer">
+	<header class="container">
+		<h1>
+			<Logo />
+			<span class="sr-only">Ricardo H. H. Kojo</span>
+		</h1>
+	</header>
+	<main>
+		<div class="callout">
+			<h2>I'm currently <b>open to work</b>! Hire me!</h2>
+			<p>Although I've mostly worked as a <b>Frontend Software Developer</b>, I'm open to other positions aswell. Feel free to contact me via LinkedIn, preferably.</p>
+		</div>
+		<p>I'm <b>Ricardo H. H. Kojo</b>, a software developer with 3+ years of experience building web applications focused on <i>acessibility</i>, <i>progressive enhancement</i> and <i>perfomance</i>.</p>
+		<p>You can find more about me and my work on <a class="devdotto" href="https://dev.to/ricardokojo">dev.to</a>, <a class="github" href="https://github.com/ricardokojo">GitHub</a> and <a class="linkedin" href="https://www.linkedin.com/in/ricardokojo">LinkedIn</a>.</p>
+	</main>
+	<footer>
+		<hr>
+		<p>This site was built using <a href="https://astro.build/">Astro</a> and <a href="https://svelte.dev/">Svelte</a>.</p>
+		<p>I intend to add more things to this page, so that this decision makes more sense.</p>
+	</footer>
+</Layout>
+
+<style>
+	header {
+		padding: 0 1rem;
+	}
+
+	h1 {
+		font-weight: 900;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 0 1rem;
+	}
+	
+	footer {
+		display: flex;
+		flex-direction: column;
+		font-size: 0.875rem;
+		justify-content: center;
+		padding: 0 1rem;
+		text-align: center;
+	}
+
+	hr {
+		margin-bottom: 1rem;
+		margin-top: 1.5rem;
+		width: 75%;
+	}
+
+	p {
+		margin: 0;
+	}
+
+	p + p {
+		margin-top: 1rem;
+	}
+
+	.callout {
+		background-color: #1f2937;
+		box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+		border-left: 5px #d1d5db solid;
+		border-radius: 5px;
+		color: #f8fafc;
+		margin-bottom: 1rem;
+		padding: 0.5rem;
+	}
+	
+	.callout h2 {
+		font-size: 0.875rem;
+		margin: 0;
+	}
+
+	.callout p {
+		font-size: 0.75rem;
+		margin-top: 0.5rem;
+	}
+
+	.devdotto::before, .github::before, .linkedin::before {
+		background-position: center;
+		background-repeat: no-repeat;
+		content: '';
+		display: inline-block;
+		height: 1rem;
+		margin-right: 0.25rem;
+		vertical-align: middle;
+		width: 1rem;
+	}
+
+	.devdotto::before {
+		background-image: url("/icons/devdotto.svg");
+	}
+
+	.github::before {
+		background-image: url("/icons/github.svg");
+	}
+
+	.linkedin::before {
+		background-image: url("/icons/linkedin.svg");
+	}
+</style>

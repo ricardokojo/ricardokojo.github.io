@@ -1,0 +1,88 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,700;0,900;1,700;1,900&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" href="/normalize.css" />
+	<meta charset="UTF-8" />
+	<meta name="description" content="Ricardo H. H. Kojo's personal page" />
+	<meta name="viewport" content="width=device-width" />
+	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<meta name="generator" content={Astro.generator} />
+	<title>{title}</title>
+</head>
+<body>
+	<slot />
+</body>
+</html>
+
+<style is:global>
+	html {
+		background-color: #f8fafc;
+		color: #1f2937;
+		font-family: 'Roboto', sans-serif;
+		font-size: 24px;
+		line-height: 1.5;
+	}
+
+	a, a:visited {
+		color: #1f2937;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: 'Noto Serif', sans-serif;
+	}
+
+	body {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	@media (min-width: 640px) {
+		.container {
+			max-width: 640px;
+		}
+	}
+	@media (min-width: 768px) {
+		.container {
+			max-width: 768px;
+		}
+	}
+	@media (min-width: 1024px) {
+		.container {
+			max-width: 1024px;
+		}
+	}
+	@media (min-width: 1280px) {
+		.container {
+			max-width: 1280px;
+		}
+	}
+	@media (min-width: 1536px) {
+		.container {
+			max-width: 1536px;
+		}
+	}
+	.sr-only {
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
+		width: 1px;
+		height: 1px;
+		margin: -1px;
+		padding: 0;
+		position: absolute;
+		overflow: hidden;
+	}
+</style>
